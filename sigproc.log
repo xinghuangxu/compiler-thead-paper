@@ -1,0 +1,27 @@
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xetex 2016.4.7)  7 APR 2016 19:09
+entering extended mode
+**"C:/Users/k586j642/Google Drive/wsu.2016.spring/CS715/Paper/rewrite/sigproc.b
+ib"
+
+("C:/Users/k586j642/Google Drive/wsu.2016.spring/CS715/Paper/rewrite/sigproc.bi
+b"
+Overfull \hbox (29.40935pt too wide) in paragraph at lines 30--40
+[]\tenrm @ARTICLEherlihy:methodology, AUTHOR = "Maurice Herlihy", TITLE = "A Me
+th-od-ol-ogy for Implementing|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm A
+.\tenrm R
+.\kern-0.83334
+.etc.
+
+)
+*
+! Emergency stop.
+<*> ...016.spring/CS715/Paper/rewrite/sigproc.bib"
+                                                  
+End of file on the terminal!
+
+No pages of output.

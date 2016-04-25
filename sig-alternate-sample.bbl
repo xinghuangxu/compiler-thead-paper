@@ -1,0 +1,54 @@
+\begin{thebibliography}{10}
+
+\bibitem{antlr}
+Antlr.
+\newblock \url{http://www.antlr.org}.
+
+\bibitem{gnu:bison}
+Gnu bison.
+\newblock \url{http://www.gnu.org/software/bison}.
+
+\bibitem{aho86compiler}
+A.~V. Aho, R.~Sethi, and J.~D. Ullman.
+\newblock {\em Compilers: Principles, Techniques, and Tools}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1986.
+
+\bibitem{aho72parsing}
+A.~V. Aho and J.~D. Ullman.
+\newblock {\em The Theory of Parsing, Translation, and Compiling}, volume I:
+  Parsing of {\em Series in Automatic Computation}.
+\newblock Prentice Hall, Englewood Cliffs, New Jersey, 1972.
+
+\bibitem{DeRemer82lalr}
+F.~DeRemer and T.~Pennello.
+\newblock Efficient computation of lalr(1) look-ahead sets.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 4(4):615--649, Oct. 1982.
+
+\bibitem{donnelly03bison}
+C.~Donnelly and R.~Stallman.
+\newblock {\em Bison Manual: Using the YACC-compatible Parser Generator}.
+\newblock GNU manual. Free Software Foundation, 2003.
+
+\bibitem{johnson79yacc}
+S.~C. Johnson.
+\newblock Yacc: Yet another compiler-compiler.
+\newblock Technical report, Bell Laboratories, Murray Hill, NJ, 1979.
+
+\bibitem{kristensen81lalr}
+B.~B. Kristensen and O.~L. Madsen.
+\newblock Methods for computing lalr(k) lookahead.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 3(1):60--82, Jan. 1981.
+
+\bibitem{pager08terminal}
+D.~Pager.
+\newblock Evaluating terminal heads of length k.
+\newblock Technical report, University of Hawaii, Information and Computer
+  Sciences Department, Nov. 2008.
+
+\bibitem{parr93ll}
+T.~Parr.
+\newblock {\em Obtaining practical variants of LL(k) and LR(k) for k > 1 by
+  splitting the atomic k-tuple}.
+\newblock PhD thesis, Purdue University, Aug. 1993.
+
+\end{thebibliography}
