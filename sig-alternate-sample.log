@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  11 APR 2016 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  25 APR 2016 16:46
 entering extended mode
 **"C:/Users/k586j642/Google Drive/wsu.2016.spring/CS715/Paper/rewrite/sig-alter
 nate-sample.tex"
@@ -250,64 +250,99 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 \c@SampleEnv=\count111
 \c@theorem=\count112
 \c@lemma=\count113
- (sig-alternate-sample.aux)
+
+("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\matht
+ools.sty"
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count114
+\calc@Bcount=\count115
+\calc@Adimen=\dimen123
+\calc@Bdimen=\dimen124
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count116
+\calc@Cskip=\skip46
+)
+("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhset
+up.sty"
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count117
+\l_MT_multwidth_dim=\dimen125
+\origjot=\skip47
+\l_MT_shortvdotswithinadjustabove_dim=\dimen126
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen127
+\l_MT_above_intertext_sep=\dimen128
+\l_MT_below_intertext_sep=\dimen129
+\l_MT_above_shortintertext_sep=\dimen130
+\l_MT_below_shortintertext_sep=\dimen131
+) (sig-alternate-sample.aux)
 \openout1 = `sig-alternate-sample.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
 .mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
-\scratchdimen=\dimen123
+\scratchcounter=\count118
+\scratchdimen=\dimen132
 \scratchbox=\box30
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count117
-\MPscratchDim=\dimen124
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen133
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks39
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 144.
+LaTeX Font Info:    Try loading font information for U+msa on input line 145.
 
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.f
 d"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 144.
+LaTeX Font Info:    Try loading font information for U+msb on input line 145.
 
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.f
 d"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 144.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 145.
 
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (525.59998pt too wide) in paragraph at lines 144--144
+Overfull \hbox (525.59998pt too wide) in paragraph at lines 145--145
  [][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 144.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 145.
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd
 "
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 144.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 145.
 
 
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.f
@@ -315,16 +350,16 @@ d"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
  Excluding 'CCSXML' comment.
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 196.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 193.
 
 
 ("C:\Users\k586j642\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
 
 [1{C:/Users/k586j642/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
@@ -336,29 +371,8 @@ Missing character: There is no ¦ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ¦ in font cmr9!
-Missing character: There is no Î in font cmr9!
-Missing character: There is no ± in font cmr9!
-Missing character: There is no Î in font cmr9!
-Missing character: There is no ² in font cmr9!
-Missing character: There is no Î in font cmr9!
-Missing character: There is no ³ in font cmr9!
-Missing character: There is no â in font cmr9!
-Missing character: There is no € in font cmr9!
-Missing character: There is no ¦ in font cmr9!
 
-Overfull \hbox (2.98967pt too wide) in paragraph at lines 324--326
-[]\T1/aer/m/n/9 A sur-vey of pre-vi-ous work on the cal-cu-la-tion of $\OML/cmm
-/m/it/9 FIRST[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 \OT1/cmr/m/n/9 )$
- []
-
-Missing character: There is no â in font cmr9!
-Missing character: There is no € in font cmr9!
-Missing character: There is no ¦ in font cmr9!
-Missing character: There is no â in font cmr9!
-Missing character: There is no € in font cmr9!
-Missing character: There is no ¦ in font cmr9!
-
-Overfull \hbox (3.2381pt too wide) in paragraph at lines 380--386
+Overfull \hbox (3.2381pt too wide) in paragraph at lines 378--383
 \T1/aer/m/n/9 string $\OML/cmm/m/it/9  \OT1/cmr/m/n/9 = \OML/cmm/m/it/9 X[]X[]
 X[]$ \T1/aer/m/n/9 in $\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 N \OMS/cmsy/m/n/9 [ \OT1
 /cmr/m/n/9 )\OMS/cmsy/m/n/9 $\T1/aer/m/n/9 , $\OML/cmm/m/it/9 FIRST[]\OT1/cmr
@@ -370,8 +384,9 @@ ST[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 X[]\OT1/cmr/m/n/9 )$
 File: thead_algorithm.PNG Graphic file (type png)
 
 <use thead_algorithm.PNG>
-Package pdftex.def Info: thead_algorithm.PNG used on input line 460.
+Package pdftex.def Info: thead_algorithm.PNG used on input line 434.
 (pdftex.def)             Requested size: 231.44945pt x 355.248pt.
+ [3 <./thead_algorithm.PNG>]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ¦ in font cmr9!
@@ -379,21 +394,20 @@ Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ¦ in font cmr9!
 
-Overfull \hbox (2.59143pt too wide) in paragraph at lines 564--566
+Overfull \hbox (2.59143pt too wide) in paragraph at lines 548--550
 []\T1/aer/m/n/9 This fol-lows from Lemma 1, Lemma 2 and Lemma
  []
 
-[3 <./thead_algorithm.PNG>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 631.
+               Default added (so using `tbp') on input line 614.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 673.
+               Default added (so using `tbp') on input line 656.
 
-[4]
-Overfull \hbox (6.54768pt too wide) in paragraph at lines 772--775
+[4] [5]
+Overfull \hbox (6.54768pt too wide) in paragraph at lines 755--758
 \T1/aer/m/it/9 find the set of 2-theads of XYZU, this time use the $\OML/cmm/m/
 it/9 FIRST[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 \OT1/cmr/m/n/9 )$
  []
@@ -405,7 +419,7 @@ Missing character: There is no µ in font cmr9!
 Missing character: There is no Î in font cmr9!
 Missing character: There is no µ in font cmr9!
 
-Overfull \hbox (4.46046pt too wide) in paragraph at lines 825--829
+Overfull \hbox (4.46046pt too wide) in paragraph at lines 808--812
 \T1/aer/m/n/9 = $\OML/cmm/m/it/9 FIRST\OT1/cmr/m/n/9 2(\OML/cmm/m/it/9 X\OT1/cm
 r/m/n/9 ) \OMS/cmsy/m/n/9 [] \OML/cmm/m/it/9 FIRST[]\OT1/cmr/m/n/9 (\OML/cmm/m
 /it/9 Y\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 [] \OML/cmm/m/it/9 FIRST\OT1/cmr/m/n/9
@@ -413,78 +427,76 @@ r/m/n/9 ) \OMS/cmsy/m/n/9 [] \OML/cmm/m/it/9 FIRST[]\OT1/cmr/m/n/9 (\OML/cmm/m
 ]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 U\OT1/cmr/m/n/9 )$
  []
 
-[5] <table3.PNG, id=37, 336.50719pt x 251.43938pt>
+<table3.PNG, id=37, 336.50719pt x 251.43938pt>
 File: table3.PNG Graphic file (type png)
  <use table3.PNG>
-Package pdftex.def Info: table3.PNG used on input line 862.
+Package pdftex.def Info: table3.PNG used on input line 845.
 (pdftex.def)             Requested size: 168.25317pt x 125.71938pt.
 
 <figure2.PNG, id=38, 359.84438pt x 235.63031pt>
 File: figure2.PNG Graphic file (type png)
  <use figure2.PNG>
-Package pdftex.def Info: figure2.PNG used on input line 870.
+Package pdftex.def Info: figure2.PNG used on input line 853.
 (pdftex.def)             Requested size: 179.92174pt x 117.81487pt.
-
-<table4.PNG, id=39, 349.305pt x 211.54031pt>
+ [6 <./table3.PNG> <./figure2.PNG>] <table4.PNG, id=44, 349.305pt x 211.54031pt
+>
 File: table4.PNG Graphic file (type png)
- <use table4.PNG>
-Package pdftex.def Info: table4.PNG used on input line 889.
+
+<use table4.PNG>
+Package pdftex.def Info: table4.PNG used on input line 872.
 (pdftex.def)             Requested size: 174.65207pt x 105.76988pt.
-
-<figure3.PNG, id=40, 369.63094pt x 247.67531pt>
+ <figure3.PNG, id=45, 369.63094pt x 247.67531pt>
 File: figure3.PNG Graphic file (type png)
- <use figure3.PNG>
-Package pdftex.def Info: figure3.PNG used on input line 897.
+
+<use figure3.PNG>
+Package pdftex.def Info: figure3.PNG used on input line 880.
 (pdftex.def)             Requested size: 184.815pt x 123.83734pt.
-
-<table5.PNG, id=41, 345.54094pt x 252.19218pt>
+ <table5.PNG, id=46, 345.54094pt x 252.19218pt>
 File: table5.PNG Graphic file (type png)
- <use table5.PNG>
-Package pdftex.def Info: table5.PNG used on input line 922.
-(pdftex.def)             Requested size: 172.77003pt x 126.09578pt.
 
-<figure4.PNG, id=42, 382.42876pt x 288.3272pt>
+<use table5.PNG>
+Package pdftex.def Info: table5.PNG used on input line 905.
+(pdftex.def)             Requested size: 172.77003pt x 126.09578pt.
+ <figure4.PNG, id=47, 382.42876pt x 288.3272pt>
 File: figure4.PNG Graphic file (type png)
- <use figure4.PNG>
-Package pdftex.def Info: figure4.PNG used on input line 930.
+
+<use figure4.PNG>
+Package pdftex.def Info: figure4.PNG used on input line 913.
 (pdftex.def)             Requested size: 191.2139pt x 144.16324pt.
 
-Overfull \hbox (7.19829pt too wide) in paragraph at lines 938--938
+Overfull \hbox (7.19829pt too wide) in paragraph at lines 921--921
 []\secfnt Test case 4: Av-er-age on 100 strings of length
  []
 
-
-Underfull \vbox (badness 7168) has occurred while \output is active []
-
- [6 <./table3.PNG> <./figure2.PNG> <./table4.PNG> <./figure3.PNG>]
-<table6.PNG, id=50, 438.8897pt x 259.7203pt>
+[7 <./table4.PNG> <./figure3.PNG> <./table5.PNG> <./figure4.PNG>]
+<table6.PNG, id=56, 438.8897pt x 259.7203pt>
 File: table6.PNG Graphic file (type png)
  <use table6.PNG>
-Package pdftex.def Info: table6.PNG used on input line 962.
+Package pdftex.def Info: table6.PNG used on input line 945.
 (pdftex.def)             Requested size: 219.4443pt x 129.85983pt.
 
-<figure5.PNG, id=51, 475.7775pt x 328.97906pt>
+<figure5.PNG, id=57, 475.7775pt x 328.97906pt>
 File: figure5.PNG Graphic file (type png)
  <use figure5.PNG>
-Package pdftex.def Info: figure5.PNG used on input line 970.
+Package pdftex.def Info: figure5.PNG used on input line 953.
 (pdftex.def)             Requested size: 237.88815pt x 164.48912pt.
 
-<figure6.PNG, id=52, 355.3275pt x 288.3272pt>
+<figure6.PNG, id=58, 355.3275pt x 288.3272pt>
 File: figure6.PNG Graphic file (type png)
  <use figure6.PNG>
-Package pdftex.def Info: figure6.PNG used on input line 997.
+Package pdftex.def Info: figure6.PNG used on input line 980.
 (pdftex.def)             Requested size: 177.6633pt x 144.16324pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./table5.PNG> <./figure4.PNG> <./table6.PNG> <./figure5.PNG>]
-Overfull \hbox (6.4066pt too wide) in paragraph at lines 1031--1033
+
+Overfull \hbox (6.4066pt too wide) in paragraph at lines 1013--1015
 []\T1/aer/m/n/9 We briefly dis-cuss the im-ple-men-ta-tion of the two ap-proach
 es
  []
 
-
-Overfull \hbox (2.58147pt too wide) in paragraph at lines 1049--1060
+[8 <./table6.PNG> <./figure5.PNG> <./figure6.PNG>]
+Overfull \hbox (2.58147pt too wide) in paragraph at lines 1031--1042
 []\T1/aer/m/n/9 To guar-an-tee sim-i-lar search ex-pe-ri-ence for both al-go-ri
 thms,
  []
@@ -493,62 +505,60 @@ Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ¦ in font cmr9!
 
-Overfull \hbox (16.86244pt too wide) in paragraph at lines 1068--1076
+Overfull \hbox (16.86244pt too wide) in paragraph at lines 1050--1058
 \T1/aer/m/n/9 man, an ar-ray is also used to store the pre-computed FIRSTk(Xi)
  []
 
 
-Overfull \hbox (13.16348pt too wide) in paragraph at lines 1094--1097
+Overfull \hbox (13.16348pt too wide) in paragraph at lines 1076--1079
 \T1/aer/m/n/9 late the ter-mi-nal heads of length k, which is called THEADk(Î±)
 . 
  []
 
 
-Overfull \hbox (20.43752pt too wide) in paragraph at lines 1107--1113
+Overfull \hbox (20.43752pt too wide) in paragraph at lines 1089--1095
 []\T1/aer/m/n/9 An em-pir-i-cal study was con-ducted to com-pare the THEADk(Î±)
 
  []
 
 
-Overfull \hbox (10.00473pt too wide) in paragraph at lines 1114--1118
+Overfull \hbox (10.00473pt too wide) in paragraph at lines 1096--1100
 []\T1/aer/m/n/9 Finally, we dis-cussed the ap-pli-ca-tion of the new THEADk(Î±)
 
  []
 
-[8 <./figure6.PNG>] (sig-alternate-sample.bbl) [9
-
-] (sig-alternate-sample.aux) ) 
+(sig-alternate-sample.bbl) [9] (sig-alternate-sample.aux) ) 
 Here is how much of TeX's memory you used:
- 2959 strings out of 493634
- 38024 string characters out of 3134015
- 127086 words of memory out of 3000000
- 6250 multiletter control sequences out of 15000+200000
- 59044 words of font info for 83 fonts, out of 3000000 for 9000
+ 3501 strings out of 493634
+ 47695 string characters out of 3134015
+ 141087 words of memory out of 3000000
+ 6782 multiletter control sequences out of 15000+200000
+ 57908 words of font info for 82 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,10n,34p,337b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/k586j642/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/k586j642/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/k586j642/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/k
-586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.
-pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi9.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/k586j642/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/k586j642
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:
+ 41i,10n,34p,367b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/k586j642/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/k586
+j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmcsc10.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/k586j642/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/k586j64
+2/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
 /Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy9.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/k586j642/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/k586j6
-42/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Us
-ers/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.
-pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/
-utmb8a.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
-/times/utmr8a.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on sig-alternate-sample.pdf (9 pages, 566996 bytes).
+m/cmr9.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/k586j642/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/k586j642/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/User
+s/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
+s/msam10.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/helvetic/uhvb8a.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/k586j642/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/k586j642/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/k586j642/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sig-alternate-sample.pdf (9 pages, 534995 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
