@@ -6,70 +6,72 @@
 \citation{antlr}
 \citation{aho72parsing}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {2}FIRST}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Notation Conventions}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Overview}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Notation Conventions}{\thepage }}
 \citation{DeRemer82lalr}
 \citation{kristensen81lalr}
 \citation{kristensen81lalr}
 \citation{parr93ll}
 \citation{aho72parsing}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Definition of FIRST}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Computing Lookahead Sets}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Method of Aho and Ullman}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Problem Definition}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Computing Lookahead Sets}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Method of Aho and Ullman}{\thepage }}
 \citation{pager08terminal}
-\@writefile{toc}{\contentsline {section}{\numberline {4}The New Algorithm}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}The $THEAD_k(\alpha )$ Algorithm}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {3}The New Algorithm}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The $THEAD_k(\alpha )$ Algorithm}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Algorithm $THREAD_k(\alpha )$}}{\thepage }}
 \newlabel{fig:thead:algorithm}{{1}{\thepage }}
-\citation{aho86compiler}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}A Complete Example of $THEAD_k(\alpha )$}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Proof of Correctness}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Complexity Analysis}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Comparison with other algorithms}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Examples}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}An Example of $THEAD_k(\alpha )$}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Example 4, roud 1 (i=1)}}{\thepage }}
 \newlabel{table:Example4Roud1}{{1}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Example 4, round 2 (i = 2)}}{\thepage }}
 \newlabel{table:Example4Roud2}{{2}{\thepage }}
+\citation{chen11full}
+\citation{chen08hyacc}
+\citation{chen11edge}
+\citation{aho86compiler}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Proof of Correctness}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Complexity Analysis}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Application}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Comparison with other \\ algorithms}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Theoretical Comparison}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Performance Comparison}{\thepage }}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Implementation Detail}{\thepage }}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Experiment}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Number of generated k-theads and time spent on input string UUUUUUUUUU, for k = 1 to 10}}{\thepage }}
 \newlabel{table:3}{{3}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ for $\alpha $ = UUUUUUUUUU, k = 1 to 10}}{\thepage }}
 \newlabel{fig:2}{{2}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Performance Study}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Test case 1: $\alpha $ = UUUUUUUUUU, k = 1 to 10}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Test case 2: $\alpha $ = XXXXXXXXXX, k = 1 to 8}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Number of generated k-theads and time spent on input string XXXXXXXXXX, for k = 1 to 8}}{\thepage }}
 \newlabel{table:4}{{4}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ for α = XXXXXXXXXX, k = 1 to 8.}}{\thepage }}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ for $\alpha $ = XXXXXXXXXX, k = 1 to 8.}}{\thepage }}
 \newlabel{fig:3}{{3}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Test case 3: $\alpha $= XYZUXYZUYX, k = 1 to 10}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Test case 4: Average on 100 strings of length 10, k = 1 to 8}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Number of generated k-theads and time spent on input string XYZUXYZUYX, for k = 1 to 10}}{\thepage }}
 \newlabel{table:5}{{5}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ for $\alpha $ = XYZUXYZUYX, k = 1 to 10.}}{\thepage }}
 \newlabel{fig:4}{{4}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Average number of generated k-theads and time spent on 100 random strings of length 10, for k = 1 to 8}}{\thepage }}
 \newlabel{table:6}{{6}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ fwhen k increases. Averaged over 100 strings of length 10}}{\thepage }}
-\newlabel{fig:5}{{5}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Test case 5: 100 strings of length 1 to 100, k = 2}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ when k = 2, and string length $|\alpha |$ increases}}{\thepage }}
-\newlabel{fig:6}{{6}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Summary}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Implementation}{\thepage }}
 \bibstyle{abbrv}
 \bibdata{sigproc}
 \bibcite{antlr}{1}
 \bibcite{gnu:bison}{2}
-\bibcite{aho86compiler}{3}
-\bibcite{aho72parsing}{4}
-\bibcite{DeRemer82lalr}{5}
-\bibcite{donnelly03bison}{6}
-\bibcite{johnson79yacc}{7}
-\bibcite{kristensen81lalr}{8}
-\bibcite{pager08terminal}{9}
-\bibcite{parr93ll}{10}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Application}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {10}References}{\thepage }}
+\bibcite{chen08hyacc}{3}
+\bibcite{aho86compiler}{4}
+\bibcite{aho72parsing}{5}
+\bibcite{chen11edge}{6}
+\bibcite{chen11full}{7}
+\bibcite{DeRemer82lalr}{8}
+\bibcite{donnelly03bison}{9}
+\bibcite{johnson79yacc}{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ when k increases. Averaged over 100 strings of length 10}}{\thepage }}
+\newlabel{fig:5}{{5}{\thepage }}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time cost of $THEAD_k(\alpha )$ versus $FIRST_k(\alpha )$ when k = 2, and string length $|\alpha |$ increases}}{\thepage }}
+\newlabel{fig:6}{{6}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {6}References}{\thepage }}
+\bibcite{kristensen81lalr}{11}
+\bibcite{pager08terminal}{12}
+\bibcite{parr93ll}{13}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Edge-Pushing LR(K) Algorithm}{\thepage }}

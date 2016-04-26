@@ -8,6 +8,10 @@ Antlr.
 Gnu bison.
 \newblock \url{http://www.gnu.org/software/bison}.
 
+\bibitem{chen08hyacc}
+Lr(1) parser generator hyacc.
+\newblock \url{http://hyacc.sourceforget.net}.
+
 \bibitem{aho86compiler}
 A.~V. Aho, R.~Sethi, and J.~D. Ullman.
 \newblock {\em Compilers: Principles, Techniques, and Tools}.
@@ -18,6 +22,19 @@ A.~V. Aho and J.~D. Ullman.
 \newblock {\em The Theory of Parsing, Translation, and Compiling}, volume I:
   Parsing of {\em Series in Automatic Computation}.
 \newblock Prentice Hall, Englewood Cliffs, New Jersey, 1972.
+
+\bibitem{chen11edge}
+X.~Chen and D.~Pager.
+\newblock The edge-pushing lr(k) algorithm.
+\newblock pages 490--495, July 2011.
+
+\bibitem{chen11full}
+X.~Chen and D.~Pager.
+\newblock Full lr(1) parser generator hyacc and study on the performance of
+  lr(1) algorithms.
+\newblock In {\em Proceedings of The Fourth International C* Conference on
+  Computer Science and Software Engineering}, C3S2E '11, pages 83--92, New
+  York, NY, USA, 2011. ACM.
 
 \bibitem{DeRemer82lalr}
 F.~DeRemer and T.~Pennello.

@@ -50,6 +50,7 @@
 
 %Numbered environment
 \newtheorem{SampleEnv}{Example}[section]
+\newtheorem{TestCase}{Test Case}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \usepackage{mathtools}
@@ -145,9 +146,9 @@ Xin Chen\\
 \maketitle
 \begin{abstract}
 Finding the terminal heads of length k of a given string in a context-free language has proven to be essential in the design of LL(k) and LR(k) parser generators. 
-Improvement on this technique would greatly enhance of performance of LL/LR parser generation. 
-Aho and Ullman have proposed a method FIRST to toggle this problem. 
-This paper presents an innovative alternative to FIRST called THREAD. 
+Improvement on this technique would greatly enhance of performance of LL/LR parser generators. 
+Aho and Ullman have proposed a method $FIRST_k(\alpha)$ to toggle this problem. 
+This paper presents an innovative alternative to $FIRST_k(\alpha)$ called THREAD. 
 We conduct performance evaluation and conclude that our method performs better under some scenarios such as when the string is long.
 
 \end{abstract}
@@ -198,28 +199,22 @@ We conduct performance evaluation and conclude that our method performs better u
 \keywords{First$_k(\alpha)$; THEAD$_k(\alpha)$; Terminal heads; LR($k$)}
 
 \section{Introduction}
-The algorithm that finds the first k terminal heads of a given string in a context-free grammar is denoted as FIRST in this paper. 
-The construction of both top-down(LL) and bottom-up(LR) parsers is aided by FIRST. 
-During LL/LR parsing, FIRST allows us to choose which production to apply, based on the next input symbol.
-The most widely used case is the computation of FIRST when k = 1, because LALR(1), LL(1), SLR(1) and LR(1) are the most efficient algorithms in parsing programming language grammars. 
+\subsection{Overview}
+The algorithm that finds the first k terminal heads of a given string in a context-free grammar is denoted as $FIRST_k(\alpha)$ in this paper. 
+The construction of both top-down(LL) and bottom-up(LR) parsers is aided by $FIRST_k(\alpha)$. 
+During LL/LR parsing, $FIRST_k(\alpha)$ allows us to choose which production to apply, based on the next input symbol.
+The most widely used case is the computation of $FIRST_k(\alpha)$ when k = 1, because LALR(1), LL(1), SLR(1) and LR(1) are the most efficient algorithms in parsing programming language grammars. 
 On the other hand, when k>1, algorithms like LL(k) with a lookahead of more than 1 tokens are more complex but they can often handle more complex and certain ambiguous context free grammars and 
 are often used in language translation and natural language processing. 
 
 The most popular real world parser generator solutions are Bison and ANTlR. 
 Bison is a general-purpose parser generator that converts an annotated context-free grammar into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables\cite{johnson79yacc,donnelly03bison, gnu:bison}. 
 ANTIR on the other hand is a LL(k) parser generator\cite{parr93ll,antlr}.
-Even though Bison and ANTIR undertake different paths in the parsing strategy they choose, both of them computes the FIRST set directly or indirectly in their parsing processes.
-The main contribution of this paper is the proposal of a new innovative approach in computing the FIRST sets.
-
-In the rest of the paper, we will first present the notation conventions and the definition of FIRST in section 2. 
-After which, we will survey related works on computing the FIRST set in section 3. 
-In section 4, we will present our innovative approach denoted as THREAD and display a few examples of applying THREAD. A performance study of our method compare to the state of the art solution is presented in Section 5. Lastly, we conclude the whole paper in Section 6.
+Even though Bison and ANTIR undertake different paths in the parsing strategy they choose, both of them computes the $FIRST_k(\alpha)$ set directly or indirectly in their parsing processes.
+The main contribution of this paper is the proposal of a new innovative approach in computing the $FIRST_k(\alpha)$ sets.
 
 
-
-
-
-In this paper we present a new algorithm, which we call
+The main contribution of this paper is the proposal for an innovative algorithm, which we call
 $THEAD_k(\alpha)$, to evaluate the terminal heads of length k of a
 given string in a context-free grammar. It is an alternative
 to the $FIRST_k(\alpha)$ algorithm of Aho and Ullman \cite{aho72parsing}, and
@@ -231,7 +226,13 @@ Since $FIRST_k(\alpha)$ is a fundamental algorithm that works
 as a basic building block in compiler theory and practice,
 its improvement should have wide impact.
 
-\section{FIRST}
+In the rest of this section, we will present the notation conventions and the problem definition. 
+After which, we will survey related works on computing the FIRST set in section 2. 
+In section 3, we will present our algorithm denoted as THREAD along with an easy to understand example. The correctness and complexity of the algorithm will also be covered in Section 3. 
+After section 3, we will compare THREAD with other algorithms in section 4. 
+Lastly, we conclude the whole paper in Section 5.
+
+
 \subsection{Notation Conventions}
 \textit{Alphabet}: A set of symbols, where a symbol is a
 non-divisible basic element of the alphabet.
@@ -280,7 +281,9 @@ its 2-thead can be aa or ab.
 \end{SampleEnv}
 
 
-\subsection{Definition of FIRST}
+\subsection{Problem Definition}
+The problem of finding the terminal heads of length k given a string $\alpha$ is equivalent to finding $FIRST_k(\alpha)$ given a grammar G and string $\alpha$.
+
 For a CFG $G = (N, \Sigma, P, S)$,
 
 $FIRST_k(\alpha) = \{x|\quad \alpha \xRightarrow[lm]{\star} x\beta \quad and \quad |x|=k \quad or \quad \alpha \xRightarrow{\star} x \quad and \quad |x|<k \}$
@@ -288,6 +291,8 @@ $FIRST_k(\alpha) = \{x|\quad \alpha \xRightarrow[lm]{\star} x\beta \quad and \qu
 Where $\xRightarrow[lm]{\star}$ means 0 or more steps of leftmost derivatives.
 In short, $FIRST_k(\alpha)$ consists of all terminal prefixes of length k (or less if $\alpha$ derives a terminal string of length less than k) of the terminal strings that can be derived from $\alpha$.
 Following are two examples on the calculation of FIRST$_k(\alpha)$.
+
+
 
 \begin{SampleEnv}
 Given grammar $S\rightarrow NM, N\rightarrow st, M\rightarrow bc$.
@@ -329,9 +334,9 @@ $FIRST_k$ for finding lookahead strings, which is needed by
 their LALR(k) algorithm. Their method is based on simulating
 all steps involved in parsing starting from a relevant
 state in a LR(0) machine. Given an example of calculating
-$LALR_k$ for $[A\rightarrow \bullet \alpha]$, their method wants to obtain the
+$LALR_k$ for $[A\rightarrow \centerdot \alpha]$, their method wants to obtain the
 sets $\cup \{FIRST_k(\psi_i) \mid i = 1,2, …, n\} $for all items 
-$[B_i\rightarrow \varphi_i \bullet A \psi_i]$, which 
+$[B_i\rightarrow \varphi_i \centerdot A \psi_i]$, which 
 \textit{"may be computed by simulating all possible
 steps that the parse algorithm may take starting in the state
 $GOTO_k(S, A)$ with an empty parse stack."}
@@ -345,7 +350,7 @@ might fail due to circularity.
 
 The PhD thesis of Parr \cite{parr93ll} proposed a method to compute
 $FIRST_k(\alpha)$. This is used in the implementation of LL(k)
-parser generator ANTLR. Parr’s PhD thesis introduces the
+parser generator ANTLR. Parr's PhD thesis introduces the
 GLA grammar representation in chapter 3, and explains
 lookahead computation and representation in chapter 4.
 Basically, a data structure called GLA (Grammar
@@ -361,7 +366,7 @@ with parsing, and in that none of them is a standalone
 method to calculate $FIRST_k(\alpha)$.
 
 All the above work redefined LOOK-AHEAD to their favor to avoid the direct computation of FIRST and FOLLOW sets. 
-They leverage the parsing machine for lookahead set computation and tightly integrate the lookahead computation with parsing. 
+They leverage the parsing machine for lookahead set computation and tightly integrate the lookahead set computation with parsing. 
 In summary, they did not provide a standalone solution to compute FIRST set.
 
 \subsection{Method of Aho and Ullman}
@@ -413,7 +418,7 @@ where the length of each terminal head string is k. $THEAD_k(\alpha)$ and $FIRST
 
 To illustrate the algorithm, we define the following notations:
 
-For a string $\alpha$ = $X_1X_2 \ldots Xn$, $|\alpha|$ is the length of $\alpha$ ($| \alpha |$ = n);
+For a string $\alpha$ = $X_1X_2 \ldots X_n$, $|\alpha|$ is the length of $\alpha$ ($| \alpha |$ = n);
 $\alpha[i]$ is the ith symbol of string $\alpha$; $h(\alpha, k)$ denotes the first k
 symbols of $\alpha$, i.e., prefix string of $\alpha$ of length k; $h_v(\alpha, k)$ is a
 substring of $\alpha$ that consists of the prefix string of $\alpha$ up to
@@ -429,7 +434,7 @@ for the empty set.
 
 Algorithm 1, $THEAD_k(\alpha)$, is shown in Figure ~\ref{fig:thead:algorithm}.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.65]{thead_algorithm.PNG}
 \caption{Algorithm $THREAD_k(\alpha)$}
@@ -446,7 +451,7 @@ consists just of $h_v(\alpha, k)$.
 The following steps are repeated to get i-THEADS where goes from 1 to k:
 \begin{enumerate}
 \item
-Expansion of Strings in L using \textit{Prod}(Lines 5-10): add to the end of L the result of applying
+Expansion of Strings in L using $prod(\alpha, i)$(Lines 5-10): add to the end of L the result of applying
 all possible productions to the $i^{th}$ symbol in the current
 member $\beta$ of L, omitting strings that are already in L, and
 truncating all members added which have k or more symbols
@@ -456,18 +461,18 @@ following the k-th symbol that does not vanish.
 Filter Invalid Strings in L(Lines 11-13): remove from L all strings whose ith symbol
 is a non-terminal. After this step, L should only contain strings whose first i symbols are non-terminals.
 \item
-Extract k-HEADS from L into H(Lines 14-19): remove from L all strings whose prefix of
+Extract k-THEADS from L into H(Lines 14-19): remove from L all strings whose prefix of
 length k consisting entirely of terminals, and add the prefixes
 of length k involved to the set H.
 \item
-Extract m-HEADS $(m<k)$ from L into S(Lines 20-25): remove from L all strings of length less
+Extract m-THEADS $(m<k)$ from L into S(Lines 20-25): remove from L all strings of length less
 than k which consist entirely of terminals, and add these to
 the set S.
 \item
 Early termination(line 26), if L is empty, the algorithm terminates. 
 \end{enumerate}
 
-After the terminal of the outermost for loop, \textbf{H}
+After the termination of the outermost for loop, \textbf{H}
 will contain the required set of terminal strings of
 length k of $\alpha$, i.e., the k-head set of $\alpha$; and S will contain the
 set of terminal strings of length less than k which are derived
@@ -479,11 +484,32 @@ the requirements on the length (should be equal to k) of
 the strings, and on the type of symbols (should be terminal
 symbol) in the strings.
 
-\subsection{A Complete Example of $THEAD_k(\alpha)$}
+\subsection{An Example of $THEAD_k(\alpha)$}
 In this section we show how $THEAD_k(\alpha)$ and $FIRST_k(\alpha)$
 work on the same input string.
 
-\begin{table}[]
+\begin{SampleEnv}
+
+
+
+Given grammar G2 ($\epsilon$ is the empty string): 
+
+$X\rightarrow XY | a | \epsilon $
+
+$Y\rightarrow Z | y | \epsilon$
+
+$Z\rightarrow X | z | \epsilon$
+
+$U\rightarrow u$
+
+Find the set of 2-theads of XYZU using 
+
+Algorithm 1:
+$THEAD_k(\alpha)$.
+\end{SampleEnv}
+
+
+\begin{table}[h]
 \centering
 \caption{Example 4, roud 1 (i=1)}
 \label{table:Example4Roud1}
@@ -525,7 +551,7 @@ i & j  & String added to L & String Sequence Number \\
 \end{tabular}
 \end{table}
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \caption{Example 4, round 2 (i = 2)}
 \label{table:Example4Roud2}
@@ -577,23 +603,6 @@ i & j  & String added to L & String Sequence Number \\
 \end{tabular}
 \end{table}
 
-\begin{SampleEnv}
-
-Given grammar G2 ($\epsilon$ is the empty string): 
-
-$X\rightarrow XY | a | \epsilon $
-
-$Y\rightarrow Z | y | \epsilon$
-
-$Z\rightarrow X | z | \epsilon$
-
-$U\rightarrow u$
-
-Find the set of 2-theads of XYZU using 
-
-Algorithm 1:
-$THEAD_k(\alpha)$.
-\end{SampleEnv}
 
 Since symbols X, Y and Z can all vanish, and U does
 not vanish, the string XYZU contains less than 2 symbols
@@ -682,9 +691,7 @@ Finally, we can calculate $FIRST_k(\alpha) = FIRST_2(XYZU)$
 = ${x, y, z, ε}\oplus_2{x, y, z, ε}\oplus_2{x, y, z, ε}\oplus2{u}$
 = \{xx, xy, xz, xu, yx, yy, yz, yu, zx, zy, zz, zu, u\}
 
-As a last step as discussed at the end of section 1.3.3, we
-remove strings whose length are less than 2, which is 'u'
-here, and obtain \{xx, xy, xz, xu, yx, yy, yz, yu, zx, zy, zz,
+We remove strings whose length are less than 2, which is 'u', and obtain \{xx, xy, xz, xu, yx, yy, yz, yu, zx, zy, zz,
 zu\}. This is the same result as using our algorithm.
 
 
@@ -772,15 +779,27 @@ in the alphabet. This is the theoretical lower boundary of
 both time and space requirements. Obviously, it is exponential
 in nature as expected.
 
-\subsection{Comparison with other algorithms}
-Aho and Ullman’s method and our method are both
+\subsection{Application}
+There could be many application of our new algorithm. One of which is in the implementation of LR(k) parser generator.
+One of the major calculation of LR(k) algorithm is the computation of the lookahead set.
+We designed and implemented the Edge-Pushing LR(k)
+algorithm, which depends on the $THEAD_k(\alpha)$ function to
+calculate k-lookahead. The algorithm is implemented in the
+HYACC parser generator, which is available as an open
+source parser generator\cite{chen11full,chen08hyacc}. For more detail of the Edge-Pushing algorithm, please go to the Appendix.A for a full version
+of the algorithm, which is taken from a previous
+paper \cite{chen11edge}. The $THEAD_k(\alpha)$ algorithm is being used on line 13.
+
+
+\section{Comparison with other \\ algorithms}
+\subsection{Theoretical Comparison}
+Aho and Ullman's method and our method are both
 standalone algorithms to compute $FIRST_k(\alpha)$, where the
 computation rely on a set of production rules of the grammar
 only, and the parsing machine is not needed. Thus
-these two methods are better than the other methods in
-literature research.
+these two methods are more comparable.
 
-Aho and Ullman’s method takes a bottom up approach
+Aho and Ullman's method takes a bottom up approach
 by first calculating $FIRST_i(X)$ for each symbol X, $i = 1, 2,
 \ldots k,$ then combining these building blocks to obtain
 $FIRST_k(\alpha)$. This is a systematic approach, which is also
@@ -802,7 +821,7 @@ the input string. No cache is needed. It removes unnecessary
 overhead strings on the way of computation.
 In nature, both methods are equivalent. Our method can
 also be used for the preparation process of Aho and
-Ullman’s method.
+Ullman's method.
 
 Another difference is that the $FIRST_k(\alpha)$ method of Aho
 and Ullman gives a set of terminal heads whose length $L \leq
@@ -813,13 +832,57 @@ sets, for one set the length of terminal heads $L = k$, and for
 the other set $L < k$. The second set where $L < k$ can be
 ignored from the calculation process.
 
-\section{Examples}
 
+\subsection{Performance Comparison}
 
-\section{Performance Study}
+\subsubsection{Implementation Detail}
 We implemented both the $THEAD_k(\alpha)$ algorithm and the
-$FIRST_k(\alpha)$ algorithm, and compared their performance. In
-each experiment, the start time and end time are measured
+$FIRST_k(\alpha)$ algorithm in ANSI C from scratch, and compared their performance. 
+To make the comparison of the two algorithms reasonable,
+it is necessary to implement them with similar data
+structures.
+
+The major operations involved in both algorithms are set
+operations. In the current implementation, a set is implemented
+as a linked list. Search in the set is done by going
+through the list in linear order. That a linked list is chosen
+for the implementation is because of the nature of the
+$THEAD_k(\alpha)$ algorithm: a new generated string has to be
+appended to the end of the current set, which makes queue
+a natural and necessary choice. A queue of unknown size as
+in the current scenario is in turn naturally implemented as a
+linked list.
+
+To guarantee similar search experience for both algorithms,
+an ordered list is used. For the method of Aho and
+Ullman, this is no problem. But for the $THEAD_k(\alpha)$ method,
+the queue (implemented as a list) to be appended that can
+not be ordered, so an auxiliary list is provided which stores
+the same strings as the queue but is in sorted order, such
+that when a search in the auxiliary ordered list does not
+return a hit, the new string is appended to the end of the
+queue. The maintenance of two lists in the $THEAD_k(\alpha)$
+algorithm implementation obviously will slow it down to
+some degree.
+
+This implementation can be improved by providing an
+auxiliary binary search tree or a hash table to both methods,
+which works much more efficient when decide if a string
+exists in a set. This improvement should be of more significance
+to the performance of the $THEAD_k(\alpha)$ algorithm
+implementation according to the above discussion.
+
+Finally, a linked list suffices for all the operations of the
+$THEAD_k(\alpha)$ algorithm. For the algorithm of Aho and
+Ullman, an array is also used to store the pre-computed
+$FIRST_k(X_i)$ values of all the symbols $X_i$, such that given a
+random string $α = X_1X_2 \ldots X_n, FIRST_k(X_i)$ can be retrieved
+in constant time using index of $X_i$ in the symbol table for
+the calculation of $FIRST_k(\alpha)$ = $FIRST_k(X_1)\oplus_k$
+$FIRST_k(X_2)$ $\oplus_k …\oplus_k FIRST_k(X_n)$.
+
+\subsubsection{Experiment}
+In each experiment, the start time and end time are measured
 multiple times, and then average start time is subtracted
 from average end time to obtain the running time. The
 study was conducted on a Sun Microsystems sun4u Netra
@@ -830,9 +893,9 @@ In the figure legends, $THEAD$ represents $THEAD_k(\alpha)$,
 and $FIRST$ represents $FIRST_k(\alpha)$.
 
 Grammar G2 is used as the testing grammar.
-
-\subsection{Test case 1: $\alpha$ = UUUUUUUUUU, k = 1 to 10}
-Result is shown in Table 3 and Figure 2. When α =
+\begin{TestCase}
+\textbf{$\alpha$ = UUUUUUUUUU and k = 1 to 10}
+Result is shown in Table 3 and Figure 2. When $\alpha$ =
 UUUUUUUUUU, there is only one terminal head, which is
 uk for k = 1 to 10. The speed is very fast, at the level of
 microsecond. The relatively long delay when k = 1 for the
@@ -840,7 +903,7 @@ $FIRST_k(\alpha)$ algorithm should be caused by the initial construction
 of the $F_i(X)$ table.
 
 
-\begin{table}
+\begin{table}[h]
 \centering
 \includegraphics[scale=0.5]{table3.PNG}
 \caption{Number of generated k-theads and time spent on
@@ -848,26 +911,27 @@ input string UUUUUUUUUU, for k = 1 to 10}
 \label{table:3}
 \end{table}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{figure2.PNG}
 \caption{Time cost of $THEAD_k(\alpha)$ versus $FIRST_k(\alpha)$
 for $\alpha$ = UUUUUUUUUU, k = 1 to 10}
 \label{fig:2}
 \end{figure}
+\end{TestCase}
 
-
-\subsection{Test case 2: $\alpha$ = XXXXXXXXXX, k = 1 to 8}
+\begin{TestCase}
+\textbf{$\alpha$ = XXXXXXXXXX and k = 1 to 8}
 Result is shown in Table 4 and Figure 3. This is the worst
 case scenario where the theoretical bound of exponential
-behavior is observed. This is because each symbol of the
+behaviour is observed. This is because each symbol of the
 input string is a non-terminal (X), which can derive 3 terminals
 x, y and z. The number of k-theads that can be generated
 is $3^k$. When k is as small as 10, this will take hours to
-finish. The result is similar when α = YYYYYYYYYY or
-α = ZZZZZZZZZZ.
+finish. The result is similar when $\alpha$ = YYYYYYYYYY or
+$\alpha$ = ZZZZZZZZZZ.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \includegraphics[scale=0.5]{table4.PNG}
 \caption{Number of generated k-theads and time spent on
@@ -875,15 +939,17 @@ input string XXXXXXXXXX, for k = 1 to 8}
 \label{table:4}
 \end{table}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{figure3.PNG}
 \caption{Time cost of $THEAD_k(\alpha)$ versus $FIRST_k(\alpha)$
-for α = XXXXXXXXXX, k = 1 to 8.}
+for $\alpha$ = XXXXXXXXXX, k = 1 to 8.}
 \label{fig:3}
 \end{figure}
+\end{TestCase}
 
-\subsection{Test case 3: $\alpha$= XYZUXYZUYX, k = 1 to 10}
+\begin{TestCase}
+\textbf{$\alpha$= XYZUXYZUYX, k = 1 to 10}
 Result is shown in Table 5 and Figure 4. Here $\alpha$ is a randomly
 generated string. We can see that THEADk(α) performs
 better than FIRSTk(α) for k = 1 to 9, but for k = 10,
@@ -900,7 +966,7 @@ implementation. This slows it down when the list is long.
 Of course, better implementation using more efficient data
 structure can improve this scenario.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \includegraphics[scale=0.5]{table5.PNG}
 \caption{Number of generated k-theads and time spent on
@@ -908,16 +974,17 @@ input string XYZUXYZUYX, for k = 1 to 10}
 \label{table:5}
 \end{table}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{figure4.PNG}
 \caption{Time cost of $THEAD_k(\alpha)$ versus $FIRST_k(\alpha)$
 for $\alpha$ = XYZUXYZUYX, k = 1 to 10.}
 \label{fig:4}
 \end{figure}
+\end{TestCase}
 
-
-\subsection{Test case 4: Average on 100 strings of length 10, k
+\begin{TestCase}
+\textbf{Average on 100 strings of length 10, k
 = 1 to 8}
 100 input strings, each of length 10, are generated from the
 alphabet of {X, Y, Z, U} using a random number generator,
@@ -940,7 +1007,7 @@ shows the graphical version of the average time used when
 k increases. It can be seen that the $THEAD_k(\alpha)$ algorithm
 uses less time.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \includegraphics[scale=0.5]{table6.PNG}
 \caption{Average number of generated k-theads and time
@@ -948,16 +1015,17 @@ spent on 100 random strings of length 10, for k = 1 to 8}
 \label{table:6}
 \end{table}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{figure5.PNG}
 \caption{Time cost of $THEAD_k(\alpha)$ versus $FIRST_k(\alpha)$
-fwhen k increases. Averaged over 100 strings of length 10}
+when k increases. Averaged over 100 strings of length 10}
 \label{fig:5}
 \end{figure}
+\end{TestCase}
 
-
-\subsection{Test case 5: 100 strings of length 1 to 100, k = 2}
+\begin{TestCase}
+\textbf{ 100 strings of length 1 to 100 with k = 2}
 In this test case, k is fixed, while the input string is a kprefix
 of the following randomly generated string, where
 input string length $|\alpha|$ = 1 to 100, i.e., the input strings may
@@ -974,18 +1042,29 @@ be like:\\
       & ZUYZUZXUY
 \end{tabular}
 
+Result is shown in Figure 6. The time used by
+$THEAD_k(\alpha)$ does not increase with k, but it does increase
+with $FIRST_k(\alpha)$ (and the increase is linear visually from the
+graph). This is easy to explain. $THEAD_k(\alpha)$ throws away
+the substring after the second symbol that does not vanish,
+so each time it starts with the prefix "YZ" of the input
+string. In comparison, $FIRST_k(\alpha)$ needs to do the $\oplus_k$ operation
+on every symbol of the input string, and  n-1  $\oplus_k$
+operations are applied for an input string of n symbols. To
+overcome this issue, $FIRST_k(\alpha)$ needs to use a preprocessing
+the same as line 3 of Algorithm 1.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{figure6.PNG}
 \caption{Time cost of $THEAD_k(\alpha)$ versus $FIRST_k(\alpha)$
 when k = 2, and string length $|\alpha|$ increases}
 \label{fig:6}
 \end{figure}
+\end{TestCase}
 
-\subsection{Summary}
+
 We can draw several conclusions from the experiments.
-
 First of all, when the input string contains terminal symbols
 only, the speed is the fastest. When the input string
 contains non-terminal symbols only, the speed is the slowest,
@@ -1009,98 +1088,33 @@ input string increase. However, the time used by $FIRST_k(\alpha)$
 will increase linearly according to the length of the input
 string.
 
-\section{Implementation}
-We briefly discuss the implementation of the two approaches
-here, which is done in ANSI C from scratch.
 
-To make the comparison of the two algorithms reasonable,
-it is necessary to implement them with similar data
-structures.
 
-The major operations involved in both algorithms are set
-operations. In the current implementation, a set is implemented
-as a linked list. Search in the set is done by going
-through the list in linear order. That a linked list is chosen
-for the implementation is because of the nature of the
-THEADk(α) algorithm: a new generated string has to be
-appended to the end of the current set, which makes queue
-a natural and necessary choice. A queue of unknown size as
-in the current scenario is in turn naturally implemented as a
-linked list.
-
-To guarantee similar search experience for both algorithms,
-an ordered list is used. For the method of Aho and
-Ullman, this is no problem. But for the THEADk(α) method,
-the queue (implemented as a list) to be appended to can
-not be ordered, so an auxiliary list is provided which stores
-the same strings as the queue but is in sorted order, such
-that when a search in the auxiliary ordered list does not
-return a hit, the new string is appended to the end of the
-queue. The maintenance of two lists in the THEADk(α)
-algorithm implementation obviously will slow it down to
-some degree.
-
-This implementation can be improved by providing an
-auxiliary binary search tree or a hash table to both methods,
-which works much more efficient when decide if a string
-exists in a set. This improvement should be of more significance
-to the performance of the THEADk(α) algorithm
-implementation according to the above discussion.
-
-Finally, a linked list suffices for all the operations of the
-THEADk(α) algorithm. For the algorithm of Aho and
-Ullman, an array is also used to store the pre-computed
-FIRSTk(Xi) values of all the symbols Xi, such that given a
-random string α = X1X2…Xn, FIRSTk(Xi) can be retrieved
-in constant time using index of Xi in the symbol table for
-the calculation of FIRSTk(α) = $FIRST_k(X_1)\oplus_k$
-$FIRST_k(X_2)$ $\oplus_k …\oplus_k FIRST_k(X_n)$.
-
-\section{Application}
-One application of the algorithm presented here is to be
-used in a LR(k) parser generation algorithm.
-
-Our study of the LR(k) algorithm shows that the calculation
-of LR(k) lookahead is one of the major steps involved.
-We designed and implemented the Edge-Pushing LR(k)
-algorithm, which depends on the THEADk(α) function to
-calculate k-lookahead. The Edge-Pushing algorithm is
-shown below in Figure 7, which is taken from a previous
-paper [11]. The THEADk(α) algorithm is used on line 13.
-
-The Edge-Pushing algorithm is implemented in the
-HYACC parser generator, which is available as an open
-source parser generator [12][13].
 
 \section{Conclusion}
-In this paper we have presented a new algorithm to calculate
-the terminal heads of length k, which is called
-THEADk(α).
+We have provide an introduction to the problem of finding
+the terminal heads of length k of a string. Earlier solutions
+to this problem is surveyed. Aho and
+Ullman's method is the only previously available
+standalone algorithm for this problem.
 
-We reviewed relevant literature, of which Aho and
-Ullman’s method is the only previously available
-standalone algorithm for this purpose.
-We showed the new algorithm, discussed its correctness
-and complexity, and compared to previous work. Examples
-are given to evaluate terminal heads of length k of a given
-string by using the THEADk(α) algorithm and the
-FIRSTk(α) method of Aho and Ullman.
-
-An empirical study was conducted to compare the
-THEADk(α) algorithm and the FIRSTk(α) algorithm. In
-general, when averaged over a large number of randomly
-generated input strings, THEADk(α) performs faster than
-FIRSTk(α). When the input string α is long but k is small,
-THEADk(α) always performs better than FIRSTk(α).
-
-Finally, we discussed the application of the new
-THEADk(α) algorithm, and pointed out that it has been
+We then propose of the 
+new solution $THREAD_k(\alpha)$ with a simple example.
+The algorithm is further analysed in terms of its correctness, complexity and application.
+We also pointed out the it has been
 used to implement the edge-pushing algorithm in the HYACC
-parser generator.
+parser generator
 
-Due to the fact that FIRSTk(α) is a fundamental algorithm
-that works as a basic building block in compiler theory
-and practice, its improvement should have wide impact.
+Moreover, we compare the algorithm with Aho and Ullman's solution.
+We first implemented the two algorithms using comparable data structures then we conduct an empirical study of the two algorithms,
+$THREAD_k(\alpha)$ and $FIRST_k(\alpha)$. In
+general, when averaged over a large number of randomly
+generated input strings, $THREAD_k(\alpha)$ performs faster than
+$FIRST_k(\alpha)$. When the input string α is long but k is small,
+$THREAD_k(\alpha)$ always performs better than $FIRST_k(\alpha)$.
+
+We believe that the improvement of $FIRST_k(\alpha)$ should have wide impact due to the fact that it is a fundamental algorithm
+that works as a basic building block for many compiler theory.
 
 
 %
@@ -1118,5 +1132,12 @@ and practice, its improvement should have wide impact.
 %
 %APPENDICES are optional
 %\balancecolumns
+\appendix
+%Appendix A
+\section{Edge-Pushing LR(K) Algorithm}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.6]{figure7.PNG}
+\end{figure}
 
 \end{document}
